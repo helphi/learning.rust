@@ -2,10 +2,6 @@
 
 ## 安装
 
-> - <https://forge.rust-lang.org/infra/other-installation-methods.html>
-> - <http://mirrors.ustc.edu.cn/help/crates.io-index.html>
-> - <http://mirrors.ustc.edu.cn/help/rust-static.html>
-
 on Ubuntu 18.04
 
 ```bash
@@ -27,3 +23,9 @@ replace-with = 'ustc'
 registry = "git://mirrors.ustc.edu.cn/crates.io-index"
 EOF
 ```
+
+> 参考文档
+
+- <https://forge.rust-lang.org/infra/other-installation-methods.html>
+- <http://mirrors.ustc.edu.cn/help/crates.io-index.html>
+- <http://mirrors.ustc.edu.cn/help/rust-static.html>
