@@ -8,4 +8,10 @@
 cargo update
 ```
 
+## 查看文档
 
+构建所有本地依赖提供的文档，并在浏览器中打开
+
+```bash
+cargo doc --open
+```
