@@ -5,8 +5,7 @@ use std::io;
 fn main() {
     println!("Guess the number!");
 
-    // `thread_rng` 是一个
-    // `gen_range` 方法是在 `rand::Rng` 这个 `trait`（类似接口interface） 中定义的，所以需要在使用 `use rand::Rng;` 将其引入
+    // `gen_range` 方法是在 `rand::Rng` 这个 `trait`（类似接口interface） 中定义的，所以需要使用 `use rand::Rng;` 将其引入
     let secret_number = rand::thread_rng().gen_range(1, 101);
 
     // `{}` 一对空的大括号表示占位符，用于显示后面的参数值，可以使用多个括号对来依次捕捉多个参数值
@@ -21,7 +20,7 @@ fn main() {
 
         io::stdin()
             .read_line(&mut guess) // `&mut` 表示可变引用（引用默认也是不可变的，如 `&guess` 就不可变）
-            .expect("Failed to read line"); // `expect` 是 `read_line` 返回的 `io::Result` 类型的工具方法，如果结果中有错误则使用传递的参数抛出错误，如果没有错误则返回结果中包含的值
+            .expect("Failed to read line"); // `expect` 是 `read_line` 返回的 `io::Result` (枚举类型)的工具方法，如果结果中有错误则使用传递的参数抛出错误，如果没有错误则返回结果中包含的值
 
         // 新的变量 `guess` 与前面定义的变量 `guess` 同名，则前面的变量将被隐藏（shadow）
         // `guess` 后面的 `: u32` 表示为变量指定类型为无符号的 32 位整型
